@@ -5,7 +5,7 @@ html {
 body {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(90,90,90,1);
+	background-color: black;
 	margin: 0;
 	font-size: 16px;
 	font-style: serif, sans-serif;
@@ -15,7 +15,7 @@ img {
 }
 /*Title Bar*/
 .fixed-title {
-	background-color: white;
+	background-color: rgba(8, 11, 39, 1);
 	position: fixed;
 	width:100%;
 	display: inline-flex;
@@ -25,12 +25,15 @@ img {
 .titles {
 	display: infline-flex;
 	flex-direction: column;
+	margin-left: 10px;
 }
 h1 {
-	color:rgba(0,0,0,1);
+	color:rgba(69, 69, 69, 1);
+	text-shadow:rgba(255,255,255,1) -3px 0 2px;
 }
 h2 {
-	color:rgba(0,0,0,1);
+	color:rgba(69, 69, 69, 1);
+	text-shadow:rgba(255,255,255,1) -3px 0 2px;
 }
 .link {
 	display:inline-flex;
@@ -42,8 +45,9 @@ button {
 	width: 60px;
 	height:30px;
 	border-radius: 25px;
-	border: 1px solid black;
-	background-color: rgba(90,155,175,1);
+	border: inset;
+	
+	background-color: rgba(69, 69, 69, 1);
 	color:#fff;
 	align-self: flex-end;
 	margin-right: 10px;
@@ -52,7 +56,7 @@ button {
 
 .clearfix {
 	display:inline-flex;
-	padding-top:130px;
+	padding-top:128px;
 }
 
 /*Main Body Panels*/
@@ -66,7 +70,21 @@ main {
 	display: block;
 	width: auto;
 	height: 800px;
-	border: 1px solid black;
+	border-radius:5px;
 	background-color: #fff;
+	margin: 10px 40px;
+	box-shadow: 0 0 11px 4px #838383;
 	
+}
+.about {
+	background:rgba(41, 14, 45, 1);
+	
+}
+
+.exp {
+	background: rgba(77, 74, 46, 1);
+}
+.portfolio {
+	background: rgba(43, 71, 40, 1);
+
 }
