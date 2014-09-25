@@ -3,21 +3,28 @@
 <head>
 	<title>About Mark</title>
 	<meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400italic' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
-
+	<script src="jquerymin.js"></script>
+	<script src="portfolio.js"></script>
 <body>
 	<div class="fixed-title">
 		<div class="titles">
-			<h1>Mark Tonkinson</h2>
-			<h2>Web Developer, Writer, Educator</h2>
+			<p>Mark Tonkinson<br>
+			<p class="subtitle">Web Developer, Writer, Educator</p>
 		</div>	
-		<div class="link buttons">
-			<button><i class="fa fa-linkedin-square"><a href="https://www.linkedin.com/profile/edit?trk=spm_pic"></a>LinkedIn</i></button>
+		<!-- <div class="link buttons">
+			<i class="fa fa-caret-square-o-down fa-4x" id="toggle-links"></i>
+		</div> -->
+		<div class="link buttons" id="link-buttons">
+			
+			<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><button><i class="fa fa-linkedin-square">LinkedIn</i></button></a>
 
-			<button><i class="fa fa-facebook-square"><a href="https://www.facebook.com/mark.tonkinson"></a>Facebook</i></button>	
-			<button><i class="fa fa-envelope"><a href="mailto:DHTMaster@gmail.com"></a>Email Me</i></button>
+			<a href="https://www.facebook.com/mark.tonkinson"><button><i class="fa fa-facebook-square">Facebook</i></button></a>
+
+			<a href="mailto:DHTMaster@gmail.com"><button><i class="fa fa-envelope">Email Me</i></button></a>
 		</div>		
 	</div>		
 
@@ -29,18 +36,18 @@
 			<img class="me" src="https://scontent-b-ord.xx.fbcdn.net/hphotos-prn1/v/t1.0-9/10462897_10154362144350468_3011459536597266112_n.jpg?oh=a8500a11f6584bcf4b89982dce150c92&oe=5494E4D9">
 				<div class="about-text-box">
 					<p>Location: Utah</p>
-					<p>I am a former english teacher turned web developer to create online learning soluitons for a better world.</p>
+					<p>I am a former english teacher turned web developer to create online learning solutions for a better world.</p>
 					My passions include all things creative.  Some of my favorites are writing essays that inspire new thought, designing instructional materials for engagement, innovative problem solving, composing music for piano and guitar, and developing mouthwatering dishes in the kitchen.</p>
-					<i class="fa fa-facebook-square"><a href="https://www.facebook.com/mark.tonkinson"></a></i>
-					<i class="fa fa-linkedin-square"><a href="https://www.linkedin.com/profile/edit?trk=spm_pic"></a></i>
-					<i class="fa fa-github-square"><a href="https://github.com/MarkTonkinson"></a></i>
-					<i class="fa fa-envelope"><a href="mailto:DHTMaster@gmail.com"></a></i>
+					<a href="https://www.facebook.com/mark.tonkinson"><i class="fa fa-facebook-square"></a></i>
+					<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><i class="fa fa-linkedin-square"></a></i>
+					<a href="https://github.com/MarkTonkinson"><i class="fa fa-github-square"></a></i>
+					<a href="mailto:DHTMaster@gmail.com"><i class="fa fa-envelope"></i></a>
 			</div>		
 			<div class="clearfloat"></div>			
 		</div>
 
 		<div class="exp panel">
-			<h2>Experience</h2>
+			<p class="panel-title">Experience</p>
 				<ul>
 					<li>Two Years Public Educator</li>
 					<li>5 Years Food Industry</li>
@@ -49,12 +56,49 @@
 
 
 		</div>	
-
+<!-- It would be fun to write a code to make the 
+items in at least the Web Development box rotate
+pulling one to the top and moving the other to the 
+bottom-->
 		<div class="portfolio panel">
-			<h2>Portfolio</h2>
-			<div class="box">Web Development</div>
-			<div class="box">Writing</div>
-			<div class="box">Education</div>
+			<p class="panel-title">Portfolio</p>
+			<div class="box">
+				<p>Web Development</p>
+					<ul>
+					<li>Projects</li>
+					<li><p><img src = "#"></p></li>
+					<li><a href="https://github.com/MarkTonkinson">My GitHub<i class="fa fa-github-square"></a></i></li>
+					</ul>
+			</div>			
+
+			<div class="box">
+				<p>Writing</p>
+					<ul>
+			    	<li><a href="http://dhtmaster.blogspot.com/">The Daily Honky Tonk</a> a personal blog targeted at friends and family.</li>
+			    	<li>One 10 minute play - selected by peers for performance</li>
+			    	<li>One collaborative children's play</li>
+			    	<li>One novel with a completed first draft</li>
+			    	</ul>
+			</div>
+
+
+			<div class="box">
+				<p>Education</p>
+				<ul>
+					<li>Brigham Young University</li>
+						
+					<li>B.S. English Education</li>
+
+					<li>Spanish Minor</li>
+						
+					<li>DevMountain - 12 Week Immersive Web Developer Boot Camp</li>
+					<li>10+ Years Piano</li>
+					<li>Self-Taught on Guitar</li>
+					<li>Life long learner</li>
+					<li><blockquote>In all affairs it’s a healthy thing now and then to hang a question mark on the thing you have long taken for granted. – Bertrand Russell</blockquote>
+					</li>
+				</ul>
+			</div>
 
 
 		</div>
