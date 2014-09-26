@@ -176,6 +176,11 @@ main {
 	align-self: flex-end;
 	margin-bottom: 215px;
 }
+/*******************Blog Panel*************************************/
+
+.blog{
+	color:white;
+}
 
 
 /*Portfolio Panel*/

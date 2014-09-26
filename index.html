@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="markT">
 <head>
 	<title>About Mark</title>
 	<meta charset="utf-8">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400italic' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
+	
+	
 </head>
-	<script src="jquerymin.js"></script>
-	<script src="portfolio.js"></script>
-<body>
+	
+<body ng-controller="mainCtrl">
 	<div class="fixed-title">
 		<div class="titles">
 			<p>Mark Tonkinson<br>
@@ -55,7 +56,16 @@
 				</ul>	
 
 
-		</div>	
+		</div>
+
+			
+		<div class="blog panel">
+			<p class="panel-title">Technical Blog</p>
+			<div ng-repeat="blogs in blog"> {{test}} {{blogs.title}} {{blogs.content}} </div>
+			
+		</div>
+	</div>
+		
 <!-- It would be fun to write a code to make the 
 items in at least the Web Development box rotate
 pulling one to the top and moving the other to the 
@@ -104,6 +114,8 @@ bottom-->
 		</div>
 	</main>
 
+
+
 	<div class ="footer">
 		<p>Photo Credits</p>
 		<p><a href="https://www.flickr.com/photos/47515486@N05/14277543891/in/photolist-nKE9nR-ooaqAG-oqx6T5-nuNGeX-nxP1tJ-oCUsan-mQg58r-mTGhNh-oLdcmk-mNkJ8s-odDvuh-p3GpBi-oqN4YW-oQkDVN-orQTJu-orEwmT-naVWoQ-kZjeRR-p6BD65-oGiRBw-nJAixo-oryNkK-owbcWo-p5AE9b-oLcHHY-p3r1a4-nNbXBH-o57F6b-o9GaDz-njPBHp-n8z53g-nUoGVK-nHvGV6-oLdcpr-ox5JbB-oiv5gs-nCCPGu-ow4fJL-p2XbtC-p2YZzT-oKhRsv-p5yoSd-nGeQhG-oGiHdY-oUk4od-oN6uhB-oN93QG-p5AgZV-p5yvmq-oN6aa9"</p>Gwawrio Padarn-Sunrise Padarn</a> by <a href="https://www.flickr.com/photos/47515486@N05/">Hefin Owen</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY 2.0</a></p>
@@ -111,5 +123,16 @@ bottom-->
 
 			
 	</div>
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>  <!--Angular, then module dependencies-->
+	<script src="textAngular-1.2.2/dist/textAngular-sanitize.min.js"></script>
+  	<script src="textAngular-1.2.2/dist/textAngular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquerymin.js"></script>
+	<script src="js/portfolio.js"></script>
+	<script src="js/headersKeys.js"></script>
+	<script src="js/mainCtrl.js"></script>
+	
+
 </body>
 </html>
