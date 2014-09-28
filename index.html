@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html ng-app="markT">
 <head>
 	<title>About Mark</title>
@@ -61,8 +61,18 @@
 			
 		<div class="blog panel">
 			<p class="panel-title">Technical Blog</p>
-			<div ng-repeat="blogs in blog"> {{test}} {{blogs.title}} {{blogs.content}} </div>
+			<div ng-repeat="blogs in staticBlogTest"> {{test}} {{blogs.title}} {{blogs.content}} </div>
+			<p>
+
+			<div class="each-blog" ng-repeat="blogs in blog | limitTo: 3 | date: 'medium'">
+				{{blogs.content}}
+				<p>{{blogs.createdAt | date: 'short'}}</p>
+			</div>
+			<button>Show More</button>
+
+			 <!--this isn't set to ng-repeat yet-->
 			
+			<!--ng-bind-html is the command that will transform it so it is normal again-->
 		</div>
 	</div>
 		
@@ -132,6 +142,7 @@ bottom-->
 	<script src="js/portfolio.js"></script>
 	<script src="js/headersKeys.js"></script>
 	<script src="js/mainCtrl.js"></script>
+	<script src="js/parseService.js"></script>
 	
 
 </body>

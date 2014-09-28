@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html ng-app="markT">
 <head>
 	<title>Blog Writer Page</title>
@@ -8,12 +8,30 @@
 	<link rel="stylesheet" href="blogWriter.css">
 </head>
 
-<body>
-Hello World {{2+2}}
-<div ng-controller="blogCtrl" class="container app">
-<div text-angular ng-model="htmlVariable"></div>
+<body ng-controller="blogCtrl">
+Blog Title:
+<input ng-model="blogtitle">
+<div  class="container app"> 
+	<!--The container app class cannot be changed! it creates the box and it's look-->
+<div text-angular="text-angular" ng-model="htmlcontent"></div> <!-- needed to see that it's working-->
+
+{{htmlcontent}}
+
+
+
+<div ng-bind-html="htmlcontent"><input type="text"></div> <!--displays your typing without the html tags-->
+
+<!--Another way to show data
+<div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div> -->
 
  </div>
+
+ <button type="button">Reset</button>
+ <button type="button" ng-click="submitBlog()">Submit</button> <!--This button needs to be programmed to submit - the reset doesn't work-->
+
+Testing Results for Blog
+<div class="blog-entries" ng-repeat="blogs in blog">{{blogs.content}}</div>
+
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
   
@@ -22,6 +40,7 @@ Hello World {{2+2}}
   <script src='js/app.js'></script>
   <script src='js/blogCtrl.js'></script>
   <script src='js/headersKeys.js'></script>
+  <script src='js/parseService.js'></script>
 
 </body>
 

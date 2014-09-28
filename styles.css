@@ -181,7 +181,11 @@ main {
 .blog{
 	color:white;
 }
-
+.each-blog {
+	text-align: center;
+	width:50%;
+	border-bottom: 2px solid white;
+}
 
 /*Portfolio Panel*/
 .portfolio {
