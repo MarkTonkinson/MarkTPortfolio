@@ -19,18 +19,18 @@ Blog Title:
 
 
 
-<div ng-bind-html="htmlcontent"><input type="text"></div> <!--displays your typing without the html tags-->
 
-<!--Another way to show data
-<div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div> -->
+<!--<div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div> -->
 
  </div>
 
  <button type="button">Reset</button>
- <button type="button" ng-click="submitBlog()">Submit</button> <!--This button needs to be programmed to submit - the reset doesn't work-->
+ <button type="button" ng-click="submitBlog()">Submit</button> <!--This button needs to be programmed to submit - the reset doesn't work - program the reset into submitBlog-->
 
 Testing Results for Blog
-<div class="blog-entries" ng-repeat="blogs in blog">{{blogs.content}}</div>
+
+	<div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div>
+	<textarea>{{htmlcontent}}</textarea>
 
 
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>

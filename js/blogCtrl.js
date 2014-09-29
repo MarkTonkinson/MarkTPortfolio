@@ -22,6 +22,7 @@ $scope.getBlog = function(){
 		.then(function(blog){
 			//displayResults(blog);//comes back as an obj with an array of objects called results that is html code
 			$scope.blog = blog.results;
+			
 		})
 	};
 	$scope.getBlog();

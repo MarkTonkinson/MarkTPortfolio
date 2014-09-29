@@ -13,7 +13,7 @@
 <body ng-controller="mainCtrl">
 	<div class="fixed-title">
 		<div class="titles">
-			<p>Mark Tonkinson<br>
+			<div>Mark Tonkinson</div>
 			<p class="subtitle">Web Developer, Writer, Educator</p>
 		</div>	
 		<!-- <div class="link buttons">
@@ -21,11 +21,11 @@
 		</div> -->
 		<div class="link buttons" id="link-buttons">
 			
-			<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><button><i class="fa fa-linkedin-square">LinkedIn</i></button></a>
+			<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><button><i class="fa fa-linkedin-square fa-2x"></i></button></a>
 
-			<a href="https://www.facebook.com/mark.tonkinson"><button><i class="fa fa-facebook-square">Facebook</i></button></a>
+			<a href="https://www.facebook.com/mark.tonkinson"><button><i class="fa fa-facebook-square fa-2x"></i></button></a>
 
-			<a href="mailto:DHTMaster@gmail.com"><button><i class="fa fa-envelope">Email Me</i></button></a>
+			<a href="mailto:DHTMaster@gmail.com"><button><i class="fa fa-envelope fa-2x"></i></button></a>
 		</div>		
 	</div>		
 
@@ -61,18 +61,19 @@
 			
 		<div class="blog panel">
 			<p class="panel-title">Technical Blog</p>
-			<div ng-repeat="blogs in staticBlogTest"> {{test}} {{blogs.title}} {{blogs.content}} </div>
-			<p>
-
-			<div class="each-blog" ng-repeat="blogs in blog | limitTo: 3 | date: 'medium'">
-				{{blogs.content}}
-				<p>{{blogs.createdAt | date: 'short'}}</p>
+			
+			<div class="each-blog" ng-repeat="blog in blogs | limitTo: 3 | date: 'medium'">
+				
+				<p ng-bind-html="blog.content"></p>
+				<p>{{blog.createdAt | date: 'short'}}</p>
 			</div>
 			<button>Show More</button>
-
-			 <!--this isn't set to ng-repeat yet-->
 			
-			<!--ng-bind-html is the command that will transform it so it is normal again-->
+			
+
+			 
+			
+			<!--ng-bind-html is the command that will transform it so it is normal again, but doesn't work here . . .-->
 		</div>
 	</div>
 		
