@@ -8,24 +8,35 @@ app.controller('blogCtrl', function($scope, blogService) {
 	
 
 $scope.submitBlog = function(){
-		
-		blogService.postParseBlog($scope.htmlcontent) //takes scope.blog and sends it on
-		
-		//we don't take any data in from the promise- because it just told us the promise ran
-		
-		//clear the blog content
+	blogService.postParseBlog($scope.htmlcontent)
+	.then(function(data){
+		$scope.htmlcontent="";
+		$scope.getBlog();
+	});
+}
+
+$scope.deleteBlog = function(blog){
+	if(confirm("Are you sure?")){ //how do I grab the response from the prompt? Put this above
+		blogService.deleteParseBlog(blog)
+		.then(function(data){
+			$scope.getBlog();
+		})
+	} else {
+		console.log('apparently you have to have an else or the delete runs');
 	}
+}
 
 $scope.getBlog = function(){
 	
 		blogService.getParseBlog()
 		.then(function(blog){
 			//displayResults(blog);//comes back as an obj with an array of objects called results that is html code
-			$scope.blog = blog.results;
+			$scope.blogs = blog.results;
 			
 		})
 	};
 	$scope.getBlog();
+
 
 });
 
