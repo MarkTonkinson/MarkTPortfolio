@@ -11,14 +11,13 @@
 </head>
 	
 <body ng-controller="mainCtrl">
+	
 	<div class="fixed-title">
 		<div class="titles">
-			<div>Mark Tonkinson</div>
-			<p class="subtitle">Web Developer, Writer, Educator</p>
+			<div>Mark Tonkinson - <span class="subtitle">Web Developer, Writer, Educator</span>
+			</div>
 		</div>	
-		<!-- <div class="link buttons">
-			<i class="fa fa-caret-square-o-down fa-4x" id="toggle-links"></i>
-		</div> -->
+
 		<div class="link buttons" id="link-buttons">
 			
 			<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><button><i class="fa fa-linkedin-square fa-2x"></i></button></a>
@@ -30,81 +29,81 @@
 	</div>		
 
 	<div class="clearfix"></div>
+	
 	<main>
 
 		<div class="about panel">
-			<h2>About Me</h2>
+			<div class="panel-title about-title">About Me</div>
 			<img class="me" src="https://scontent-b-ord.xx.fbcdn.net/hphotos-prn1/v/t1.0-9/10462897_10154362144350468_3011459536597266112_n.jpg?oh=a8500a11f6584bcf4b89982dce150c92&oe=5494E4D9">
 				<div class="about-text-box">
 					<p>Location: Utah</p>
 					<p>I am a former english teacher turned web developer to create online learning solutions for a better world.</p>
-					My passions include all things creative.  Some of my favorites are writing essays that inspire new thought, designing instructional materials for engagement, innovative problem solving, composing music for piano and guitar, and developing mouthwatering dishes in the kitchen.</p>
+					My passions include all things creative.  Some of my favorites are writing essays that inspire new thought, designing instructional materials for engagement, innovative problem solving, composing music for piano and guitar, and developing mouthwatering dishes in the kitchen. And, of course, web development.</p>
 					<a href="https://www.facebook.com/mark.tonkinson"><i class="fa fa-facebook-square"></a></i>
 					<a href="https://www.linkedin.com/profile/edit?trk=spm_pic"><i class="fa fa-linkedin-square"></a></i>
 					<a href="https://github.com/MarkTonkinson"><i class="fa fa-github-square"></a></i>
 					<a href="mailto:DHTMaster@gmail.com"><i class="fa fa-envelope"></i></a>
-			</div>		
+				</div>		
 			<div class="clearfloat"></div>			
 		</div>
 
 		<div class="exp panel">
-			<p class="panel-title">Experience</p>
-				<ul>
-					<li>Two Years Public Educator</li>
-					<li>5 Years Food Industry</li>
-					<li>5+ Years Leadership Experience</li>
-				</ul>	
+			<div class="panel-title font-black exp-title-margin">Experience</div>
+				<div class="exp-list">
+					<ul>
+						<li>Two Years Public Educator</li>
+						<li>5 Years Food Industry</li>
+						<li>5+ Years Leadership Experience</li>
+					</ul>
+				</div>	
 
 
 		</div>
 
 			
-		<div class="blog panel">
+		<div class="blog-panel panel">
 			<p class="panel-title">Technical Blog</p>
-			
-			<div class="each-blog" ng-repeat="blog in blogs | limitTo: 3 | date: 'medium'">
+			<div class="blog">
 				
-				<p ng-bind-html="blog.content"></p>
-				<p>{{blog.createdAt | date: 'short'}}</p>
+				<div class="each-blog" ng-repeat="blog in blogs | limitTo: 3 | date: 'medium'">
+					<p ng-bind-html="blog.content"></p>
+					<p>{{blog.createdAt | date: 'short'}}</p>
+				</div>
 			</div>
-			<button>Show More</button>
-			
-			
+<!-- 			<button>Show More</button> -->
 
-			 
-			
-			<!--ng-bind-html is the command that will transform it so it is normal again, but doesn't work here . . .-->
 		</div>
-	</div>
+	
+
 		
 <!-- It would be fun to write a code to make the 
 items in at least the Web Development box rotate
 pulling one to the top and moving the other to the 
 bottom-->
 		<div class="portfolio panel">
-			<p class="panel-title">Portfolio</p>
+			<p class="panel-title font-black">Portfolio</p>
 			<div class="box">
-				<p>Web Development</p>
+				<div class="box-title">Web Development</div>
 					<ul>
-					<li>Projects</li>
-					<li><p><img src = "#"></p></li>
-					<li><a href="https://github.com/MarkTonkinson">My GitHub<i class="fa fa-github-square"></a></i></li>
+						<li><a href="https://github.com/MarkTonkinson">My GitHub Profile</a></li>
+						<li><a href="cooknookcollection.com">Cook's Nook</a> - MEAN Stack application I own and created.</li>
+						<li><a href="https://mtscattergories.firebaseapp.com/#/login">Scattergories</a> - Angular application using Firebase for the back end.</li>
 					</ul>
 			</div>			
 
 			<div class="box">
-				<p>Writing</p>
+				<div class="box-title">Writing</div>
 					<ul>
-			    	<li><a href="http://dhtmaster.blogspot.com/">The Daily Honky Tonk</a> a personal blog targeted at friends and family.</li>
-			    	<li>One 10 minute play - selected by peers for performance</li>
-			    	<li>One collaborative children's play</li>
-			    	<li>One novel with a completed first draft</li>
+				    	<li><a href="http://dhtmaster.blogspot.com/">The Daily Honky Tonk</a> a personal blog targeted at friends and family.</li>
+				    	<li>One 10 minute play - selected by peers for performance</li>
+				    	<li>One collaborative children's play</li>
+				    	<li>One novel with a completed first draft</li>
 			    	</ul>
 			</div>
 
 
 			<div class="box">
-				<p>Education</p>
+				<div class="box-title">Education</div>
 				<ul>
 					<li>Brigham Young University</li>
 						
@@ -116,8 +115,8 @@ bottom-->
 					<li>10+ Years Piano</li>
 					<li>Self-Taught on Guitar</li>
 					<li>Life long learner</li>
-					<li><blockquote>In all affairs it’s a healthy thing now and then to hang a question mark on the thing you have long taken for granted. – Bertrand Russell</blockquote>
-					</li>
+					<blockquote>"In all affairs it’s a healthy thing now and then to hang a question mark on the thing you have long taken for granted. – Bertrand Russell"</blockquote>
+
 				</ul>
 			</div>
 
