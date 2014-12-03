@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html ng-app="markT">
+<head>
+	<title>Blog Writer Page</title>
+	
+	<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="blogWriter.css">
+</head>
+
+<body ng-controller="blogCtrl">
+
+<h1>Blog Writer</h1>
+<div  class="container app"> 
+	<!--The container app class cannot be changed! it creates the box and it's look-->
+<div text-angular="text-angular" ng-model="htmlcontent"></div> <!-- needed to see that it's working-->
+
+{{htmlcontent}}
+
+
+
+
+<!--<div ta-bind="text" ng-model="htmlcontent" ta-readonly='disabled'></div> -->
+
+ </div>
+
+
+ <button type="button" ng-click="submitBlog()">Submit</button> <!--This button needs to be programmed to submit - the reset doesn't work - program the reset into submitBlog-->
+
+
+
+<h3>Blog Manager</h3>
+
+<div class="each-blog" ng-repeat="blog in blogs | date: 'medium'">
+				
+	<p ng-bind-html="blog.content"></p>
+	<p>{{blog.createdAt | date: 'short'}}</p>
+	<button ng-click="deleteBlog(blog)">Delete</button>
+
+
+</div>
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+  
+  <script src="textAngular-1.2.2/dist/textAngular-sanitize.min.js"></script>
+  <script src="textAngular-1.2.2/dist/textAngular.min.js"></script>
+  <script src='js/app.js'></script>
+  <script src='js/blogCtrl.js'></script>
+  <script src='js/headersKeys.js'></script>
+  <script src='js/blogService.js'></script>
+
+</body>
+
+</html>
