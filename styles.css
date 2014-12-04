@@ -30,9 +30,9 @@ a:link {
 a:hover {
 	color: blue;
 }
-/*a:visited {
+a:visited {
 	color: white;
-}*/
+}
 
 i {
 	transition: hover .2s ease,
@@ -248,8 +248,12 @@ main {
 	color: black;
 }
 .box a {
-	color:black;
+	color: rgba(0, 18, 190, 1);
 	text-decoration: underline;
+}
+
+.box a:hover {
+	color: black;
 }
 .box ul {
 	padding: 0;
