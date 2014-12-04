@@ -27,9 +27,12 @@ a:link {
 	text-decoration: none;
 }
 
-a:visited {
-	color: white;
+a:hover {
+	color: blue;
 }
+/*a:visited {
+	color: white;
+}*/
 
 i {
 	transition: hover .2s ease,
