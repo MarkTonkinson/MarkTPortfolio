@@ -1,13 +1,17 @@
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+	.box blockquote {
+		color:red;
+	}
+}*/
+
+
+
 html {
 	margin:0;
 }
 
-/*Need to fix buttons at top so they go to column
-under a certain width- also the bottom three have
-trouble because they move outside their panel
-when it collapses to next row- also need a min height so 
-the middle column doesn't dissappear- maybe the
-footer could dissappear?
+
+/*
 On small screen the fixed bar would have to 
 dissappear*/
 
@@ -20,9 +24,6 @@ body {
 	font-family: 'Lato',serif, sans-serif;
 }
 
-p {
-
-}
 a:link {
 	text-decoration: none;
 }
@@ -109,7 +110,7 @@ main {
 
 .panel {
 	width: auto;
-	height: 559px;
+	/*height: 559px;*/
 	border-radius:5px;
 	/*margin: 10px 0;*/
 	color:  #fff;	
@@ -280,15 +281,13 @@ main {
 
 
 .footer {
-/*	position: fixed;*/
+
 	width:100%;
 	height: 5rem;
 	background: #fff;
-	bottom:0;
 	font-style: italic;
 	font-size: .7rem;
-/*	transition: background-color 1.5s ease,
-				color 1.5s ease-in-out;*/
+
 }
 .footer a {
 	color: rgba(8, 11, 39, 1);
@@ -304,6 +303,72 @@ main {
 	color:white;
 }	
 */
+
+@media (max-width: 1190px) {
+	#link-buttons {
+		display: block;
+	}
+
+	.exp-list {
+		margin-left: 4rem;
+	}
+
+	.blog {
+		width: 80%;
+	}
+
+	.box {
+		width: 100%;
+		background: white;
+		min-height: 2rem;
+		margin:0;
+	}
+
+	.portfolio {
+		background-image: none;
+
+	}
+
+
+}
+
+@media (max-width: 675px){
+	.fixed-title {
+		display: block;
+		position: absolute;
+	}
+
+	.titles:first-child {
+		font-size: 1rem;
+	}
+
+	#link-buttons {
+		display: block;
+		text-align: center;
+	}
+	.about {
+		margin-top:1rem;
+		height: 55rem;
+		overflow: hidden;
+	}
+
+	.me {
+		float: none;
+		display: block;
+		width: 50%;
+		height: auto;
+		margin-left: 25%
+	}
+
+	
+	.about-text-box {
+		float: none;
+		display: block;
+		width: 80%;
+		margin-left: 5%;
+	}
+
+}
 
 
 
